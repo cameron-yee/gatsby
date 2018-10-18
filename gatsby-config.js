@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'The Average Gatsby',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -17,5 +17,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      //  options: {
+      //    modulePath: `${__dirname}/src/admin/cms.js`
+      //  }
+    },
+    'gatsby-plugin-sass',
   ],
 }

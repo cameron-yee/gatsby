@@ -1,31 +1,28 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import headerStyles from './header.module.scss'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
+
+// const Header = ({ siteTitle }, { links }) => (
+const Header = (props) => (
+  <div className={headerStyles.headerbar}>
+    <div className={headerStyles.items}>
+      <h1>
+        <Link className={headerStyles.link} to="/">{props.siteTitle}</Link>
       </h1>
+      <p>{props.links}</p>
+      <ul>
+        {/* {props.map(function(link, i){
+          let ugly_text = link.substr(1);
+          let cap = ugly_text[0].toUpperCase();
+          let link_text = cap + ugly_text.substr(1);
+          return (
+            <li key={i}>
+              <Link to={link}>{link_text}</Link>
+            </li>
+          ) 
+        })} */}
+      </ul>
     </div>
   </div>
 )
