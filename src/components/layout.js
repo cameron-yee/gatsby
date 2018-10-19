@@ -28,7 +28,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} links="['/about']" />
+        <Header siteTitle={data.site.siteMetadata.title} links={['/about', '/test']} />
         {/* <Header links="['/about']"/> */}
         <div
           style={{
