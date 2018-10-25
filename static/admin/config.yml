@@ -9,10 +9,21 @@ public_folder: assets
 collections:
     - name: blog
       label: Blog
-      folder: src/pages/markdown
+      folder: src/pages/markdown/blog
       create: true
       fields:
           - { name: path, label: Path }
           - { name: date, label: Date, widget: date }
           - { name: title, label: Title }
           - { name: body, label: Body, widget: markdown }
+    
+    - name: sleep
+      label: Sleep
+      folder: src/pages/markdown/sleep
+      create: true
+      fields:
+          - { name: path, label: Path }
+          - { name: date, label: Date, widget: date }
+          - { name: bed_time, label: "Bed Time", widget: string }
+          - { name: wake_up_time, label: "Wake Up Time", widget: string }
+

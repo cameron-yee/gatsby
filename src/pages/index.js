@@ -3,15 +3,17 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import Content from '../components/content'
+import SleepForm from '../components/sleepform'
 import 'bulma/bulma.sass'
-import bulmaCarousel from 'bulma-carousel'
+// import bulmaCarousel from 'bulma-carousel'
 // import 'bulma-carousel/dist/css/bulma-carousel.sass'
-import 'bulma-carousel/dist/js/bulma-carousel.min.js'
+// import 'bulma-carousel/dist/js/bulma-carousel.min.js'
 
 const IndexPage = () => (
   <Layout>
     <Content>
-      <div className='carousel carousel-animated carousel-animate-slide'>
+      <SleepForm></SleepForm>
+      {/* <div className='carousel carousel-animated carousel-animate-slide'>
         <div className='carousel-container'>
           <div className='carousel-item has-background is-active'>
             <img className="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="" width="640" height="310" />
@@ -38,16 +40,16 @@ const IndexPage = () => (
             <i className="fa fa-chevron-right" aria-hidden="true"></i>
           </div>
         </div>
-      </div>
+      </div> */}
     </Content>
   </Layout>
 )
 
-let setCarousel = () => {
-  bulmaCarousel.attach();
-}
+// let setCarousel = () => {
+//   bulmaCarousel.attach();
+// }
 
-console.log('test');
-window.onload = setCarousel;
+// console.log('test');
+// window.onload = setCarousel;
 
 export default IndexPage
