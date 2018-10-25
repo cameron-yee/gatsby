@@ -9,7 +9,7 @@ const SleepForm = (props) => (
         <div className="field">
           <label className="label">First Name</label>
           <div className="control">
-            <input className="input" type="text" placeholder="First Name" />
+            <input name="First Name" className="input" type="text" placeholder="First Name" />
           </div>
         </div>
       </div>
@@ -17,7 +17,7 @@ const SleepForm = (props) => (
         <div className="field">
           <label className="label">Last Name</label>
           <div className="control">
-            <input className="input" type="text" placeholder="Last Name" />
+            <input name="Last Name" className="input" type="text" placeholder="Last Name" />
           </div>
         </div>
       </div>
@@ -25,15 +25,15 @@ const SleepForm = (props) => (
         <div className="field">
           <label className="label">Bed Time</label>
           <div className="control">
-            <input className="input" type="time" />
+            <input name="Bed Time" className="input" type="time" />
           </div>
         </div>
       </div>
       <div className="column is-one-third">
         <div className="field">
-          <label className="label">Awake Time</label>
+          <label className="label">Wake Up Time</label>
           <div className="control">
-            <input className="input" type="time" />
+            <input name="Wake Up Time" className="input" type="time" />
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@ const SleepForm = (props) => (
         <div className="field">
           <label className="label">Date</label>
           <div className="control">
-            <input className="input" type="date" />
+            <input name="Date" className="input" type="date" />
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@ const SleepForm = (props) => (
         <div className="field">
           <label className="label">Notes</label>
           <div className="control">
-            <textarea className="textarea" type="Textarea" placeholder="Ex. Woke up at 3am"></textarea>
+            <textarea name="Notes" className="textarea" type="Textarea" placeholder="Ex. Woke up at 3am"></textarea>
           </div>
         </div>
       </div>
