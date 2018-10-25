@@ -24,5 +24,13 @@ module.exports = {
       //  }
     },
     'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages/markdown`,
+        name: "markdown-pages",
+      }
+    },
+    'gatsby-transformer-remark'
   ],
 }
