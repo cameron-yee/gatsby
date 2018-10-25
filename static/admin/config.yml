@@ -23,7 +23,10 @@ collections:
       create: true
       fields:
           - { name: path, label: Path }
+          - { name: fname, label: "First Name", widget: string }
+          - { name: lname, label: "Last Name", widget: string }
           - { name: date, label: Date, widget: date }
           - { name: bed_time, label: "Bed Time", widget: string }
           - { name: wake_up_time, label: "Wake Up Time", widget: string }
+          - { name: notes, label: "Notes", widget: text }
 
