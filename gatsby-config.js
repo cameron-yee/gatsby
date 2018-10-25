@@ -3,7 +3,7 @@ module.exports = {
     title: 'The Average Gatsby',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -16,14 +16,14 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-netlify-cms`,
       //  options: {
       //    modulePath: `${__dirname}/src/admin/cms.js`
       //  }
     },
-    'gatsby-plugin-sass',
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,6 +31,6 @@ module.exports = {
         name: "markdown-pages",
       }
     },
-    'gatsby-transformer-remark'
+    `gatsby-transformer-remark`
   ],
 }

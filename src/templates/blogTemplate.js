@@ -8,6 +8,7 @@ import { graphql } from 'gatsby';
 
 export default function BlogTemplate ({ data, }) {
   const { markdownRemark } = data;
+  console.log(data);
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
@@ -15,9 +16,7 @@ export default function BlogTemplate ({ data, }) {
         <div>
           <h1>{frontmatter.title}</h1>
           <h1>{frontmatter.date}</h1>
-          <div>
-            dangerouslySetInnerHTML={{ __html: html }}
-          </div>
+          <div dangerouslySetInnerHTML={{ __html: html }}></div>
         </div>
       </Content>
     </Layout>

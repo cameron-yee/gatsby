@@ -9,7 +9,7 @@ public_folder: assets
 collections:
     - name: blog
       label: Blog
-      folder: src/pages/markdown/blog
+      folder: src/pages/markdown
       create: true
       fields:
           - { name: path, label: Path }
