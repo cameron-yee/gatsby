@@ -2,7 +2,7 @@ import React from 'react'
 import 'bulma/bulma.sass'
 
 const SleepForm = (props) => (
-  <form name="sleep-entry" method="post"  action="/" data-netlify="true" data-netlify-honeypot="bot-field">
+  <form name="sleep" method="POST" netlify data-netlify-honeypot="bot-field">
     <input type="hidden" name="bot-field" />
     <div className="columns is-multiline">
       <div className="column is-half">
