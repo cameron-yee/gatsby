@@ -5,7 +5,7 @@ import 'bulma/bulma.sass'
 
 const PostLink = ({ post }) => (
   <div>
-    <Link to={post.frontmatter.path}>
+    <Link to={post.frontmatter.slug}>
       {post.frontmatter.title} ({post.frontmatter.date})
     </Link>
   </div>

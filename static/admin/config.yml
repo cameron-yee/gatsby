@@ -7,26 +7,39 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-    - name: blog
-      label: Blog
-      folder: src/pages/markdown/blog
+    - name: cameron-content
+      label: Cameron Content
+      folder: src/data/cameron
       create: true
       fields:
-          - { name: path, label: Path }
+          - { name: slug, label: Slug }
           - { name: date, label: Date, widget: date }
+          - { name: title, label: Title, widget: String }
           - { name: title, label: Title }
+          - { name: person, label: Person, widget: hidden, default: Cameron }
+          - { name: body, label: Body, widget: markdown }
+
+    - name: eric-content
+      label: Eric Content
+      folder: src/data/eric
+      create: true
+      fields:
+          - { name: slug, label: Slug }
+          - { name: date, label: Date, widget: date }
+          - { name: title, label: Title, widget: String }
+          - { name: person, label: Person, widget: hidden, default: Eric }
           - { name: body, label: Body, widget: markdown }
     
-    - name: sleep
-      label: Sleep
-      folder: src/pages/markdown/sleep
-      create: true
-      fields:
-          - { name: path, label: Path }
-          - { name: fname, label: "First Name", widget: string }
-          - { name: lname, label: "Last Name", widget: string }
-          - { name: date, label: Date, widget: date }
-          - { name: bed_time, label: "Bed Time", widget: string }
-          - { name: wake_up_time, label: "Wake Up Time", widget: string }
-          - { name: notes, label: "Notes", widget: text }
+    # - name: sleep
+    #   label: Sleep
+    #   folder: src/pages/markdown/sleep
+    #   create: true
+    #   fields:
+    #       - { name: path, label: Path }
+    #       - { name: fname, label: "First Name", widget: string }
+    #       - { name: lname, label: "Last Name", widget: string }
+    #       - { name: date, label: Date, widget: date }
+    #       - { name: bed_time, label: "Bed Time", widget: string }
+    #       - { name: wake_up_time, label: "Wake Up Time", widget: string }
+    #       - { name: notes, label: "Notes", widget: text }
 

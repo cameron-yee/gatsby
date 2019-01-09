@@ -27,10 +27,17 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages/markdown`,
-        name: "markdown-pages",
+        path: `${__dirname}/src/data`,
+        name: "data",
       }
     },
     `gatsby-transformer-remark`
+    // {
+    //   resolve: `gatsby-source-strapi`,
+    //   options: {
+    //     apiURL: `http://localhost:1337`,
+    //     contentTypes: [`post`, `user`]
+    //   }
+    // },
   ],
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 // import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
-import Content from '../components/content'
+import Layout from '../components/layout/layout'
+import Content from '../components/layout/pieces/content'
 import 'bulma/bulma.sass'
 import { graphql } from 'gatsby';
 
-export default function BlogTemplate ({ data, }) {
+const journalTemplate = ({ data, }) => {
   const { markdownRemark } = data;
   console.log(data);
   const { frontmatter, html } = markdownRemark;
@@ -24,14 +24,17 @@ export default function BlogTemplate ({ data, }) {
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path }}) {
+  query($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug }}) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        path
+        slug
+        person
         title
       }
     }
   }
 `
+
+export default journalTemplate

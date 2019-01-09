@@ -11,39 +11,83 @@ const path = require("path")
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogTemplate = path.resolve(`src/templates/blogTemplate.js`) 
+  const cameronJournalPages = new Promise((resolve, reject) => {
+    const journalTemplate = path.resolve(`src/templates/journalTemplate.js`) 
 
-  return new Promise((resolve, reject) => {
     resolve(graphql(`
       {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
+          filter: {frontmatter: { person: {eq: "Cameron"}}}
           limit: 1000 
         ) {
           edges {
             node {
               frontmatter {
-                path
+                slug
               }
             }
           }
         }
       }
-  `).then(result => {
-    if(result.errors) {
-      reject(result.errors)
-    }
+    `).then(result => {
+      if(result.errors) {
+        reject(result.errors)
+      }
 
-      result.data.allMarkdownRemark.edges.forEach(({node}) => {
-        createPage({
-          path: node.frontmatter.path,
-          component: blogTemplate,
-          context: {},
+        result.data.allMarkdownRemark.edges.forEach(({node}) => {
+          const slug = node.frontmatter.slug
+          createPage({
+            path: slug,
+            component: journalTemplate,
+            context: {
+              slug
+            },
+          })
         })
-      })
 
-      return
-      })
-    )
+        })
+      )
   })
+
+  const ericJournalPages = new Promise((resolve, reject) => {
+    const journalTemplate = path.resolve(`src/templates/journalTemplate.js`) 
+
+    resolve(graphql(`
+      {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: {frontmatter: { person: {eq: "Eric"}}}
+          limit: 1000 
+        ) {
+          edges {
+            node {
+              frontmatter {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `).then(result => {
+      if(result.errors) {
+        reject(result.errors)
+      }
+
+        result.data.allMarkdownRemark.edges.forEach(({node}) => {
+          const slug = node.frontmatter.slug
+          createPage({
+            path: slug,
+            component: journalTemplate,
+            context: {
+              slug
+            },
+          })
+        })
+
+        })
+      )
+  })
+
+  return Promise.all([cameronJournalPages, ericJournalPages])
 }

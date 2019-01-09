@@ -4,15 +4,17 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "axios": "^0.18.0",
     "bulma": "^0.7.2",
     "bulma-carousel": "^3.0.0",
-    "gatsby": "^2.0.19",
+    "gatsby": "^2.0.89",
     "gatsby-plugin-manifest": "^2.0.5",
     "gatsby-plugin-netlify-cms": "^3.0.3",
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.1",
     "gatsby-source-filesystem": "^2.0.5",
+    "gatsby-source-strapi": "0.0.4",
     "gatsby-transformer-remark": "^2.1.9",
     "install": "^0.12.2",
     "netlify-cms": "^2.1.3",
@@ -30,7 +32,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "ruby -pi -e \"gsub(/^(\\s+)return clean\\(item\\);/,'\\1item.id=item.id.toString();return clean(item);')\"  ./node_modules/gatsby-source-strapi/fetch.js"
   },
   "devDependencies": {
     "prettier": "^1.14.2"

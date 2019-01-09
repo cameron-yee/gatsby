@@ -21,7 +21,8 @@ const Header = (props) => (
     <div className="navbar-end">
       <div className="navbar-item">
         <Link className={headerStyles.link} to="/about">About</Link>
-        <Link className={headerStyles.link} to="/contact">Contact</Link>
+        <Link className={headerStyles.link} to="/cameron">Cameron</Link>
+        <Link className={headerStyles.link} to="/eric">Eric</Link>
         <Link className={headerStyles.link} to="/admin">Admin</Link>
       </div>
     </div>

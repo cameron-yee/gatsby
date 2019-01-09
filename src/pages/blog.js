@@ -1,8 +1,8 @@
 import React from 'react'
 import PostLink from '../components/postlink'
 
-import Layout from '../components/layout'
-import Content from '../components/content'
+import Layout from '../components/layout/layout'
+import Content from '../components/layout/pieces/content'
 import { graphql } from 'gatsby';
 
 const Blog = ({data: { allMarkdownRemark: { edges },},}) => {
@@ -30,7 +30,8 @@ export const pageQuery = graphql`
           excerpt(pruneLength: 250)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
-            path
+            slug
+            person
             title
           }
         }
