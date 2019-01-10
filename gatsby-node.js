@@ -38,7 +38,7 @@ exports.createPages = ({ actions, graphql }) => {
         result.data.allMarkdownRemark.edges.forEach(({node}) => {
           const slug = node.frontmatter.slug
           createPage({
-            path: slug,
+            path: `/cameron${slug}`,
             component: journalTemplate,
             context: {
               slug
@@ -77,7 +77,7 @@ exports.createPages = ({ actions, graphql }) => {
         result.data.allMarkdownRemark.edges.forEach(({node}) => {
           const slug = node.frontmatter.slug
           createPage({
-            path: slug,
+            path: `/eric${slug}`,
             component: journalTemplate,
             context: {
               slug

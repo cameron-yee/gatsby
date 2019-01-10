@@ -4,26 +4,28 @@ import headerStyles from './header.module.scss'
 import 'bulma/bulma.sass'
 
 const Header = (props) => (
-  <div className="navbar is-fixed-top">
-    <div className="navbar-brand">
-      <div className="navbar-item">
-        <h1>
-          <Link className={headerStyles.link} to="/">{props.siteTitle}</Link>
-        </h1>
+  <div className="column is-full is-gapless">
+    <div className="navbar is-fixed-top">
+      <div className="navbar-brand">
+        <div className="navbar-item">
+          <h1>
+            <Link className={headerStyles.link} to="/">{props.siteTitle}</Link>
+          </h1>
+        </div>
+        {/* eslint-disable-next-line */}
+        <a role="button" className="navbar-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
       </div>
-      {/* eslint-disable-next-line */}
-      <a role="button" className="navbar-burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </div>
-    <div className="navbar-end">
-      <div className="navbar-item">
-        <Link className={headerStyles.link} to="/about">About</Link>
-        <Link className={headerStyles.link} to="/cameron">Cameron</Link>
-        <Link className={headerStyles.link} to="/eric">Eric</Link>
-        <Link className={headerStyles.link} to="/admin">Admin</Link>
+      <div className="navbar-end">
+        <div className="navbar-item">
+          <Link className={headerStyles.link} to="/about">About</Link>
+          <Link className={headerStyles.link} to="/cameron">Cameron</Link>
+          <Link className={headerStyles.link} to="/eric">Eric</Link>
+          <Link className={headerStyles.link} to="/admin">Admin</Link>
+        </div>
       </div>
     </div>
   </div>
