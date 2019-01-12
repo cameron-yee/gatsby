@@ -15,7 +15,7 @@ collections:
           - { name: slug, label: Slug }
           - { name: date, label: Date, widget: date }
           - { name: title, label: Title, widget: String }
-          - { name: title, label: Title }
+          - { name: type,  label: Type, widget: select, options: ['Personal', 'DSHIP'] }
           - { name: person, label: Person, widget: hidden, default: Cameron }
           - { name: body, label: Body, widget: markdown }
 
@@ -27,6 +27,7 @@ collections:
           - { name: slug, label: Slug }
           - { name: date, label: Date, widget: date }
           - { name: title, label: Title, widget: String }
+          - { name: type,  label: Type, widget: select, options: ['Personal', 'DSHIP'] }
           - { name: person, label: Person, widget: hidden, default: Eric }
           - { name: body, label: Body, widget: markdown }
     

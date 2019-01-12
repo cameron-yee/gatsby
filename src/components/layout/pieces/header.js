@@ -2,10 +2,19 @@ import React from 'react'
 import { Link } from 'gatsby'
 import headerStyles from './header.module.scss'
 import 'bulma/bulma.sass'
+import styled from 'styled-components'
+
+const Navbar = styled.div`
+  background-color: black;
+  color: #00FFFF !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 const Header = (props) => (
   <div className="column is-full is-gapless">
-    <div className="navbar is-fixed-top">
+    <Navbar className="navbar is-fixed-top">
       <div className="navbar-brand">
         <div className="navbar-item">
           <h1>
@@ -27,7 +36,7 @@ const Header = (props) => (
           <Link className={headerStyles.link} to="/admin">Admin</Link>
         </div>
       </div>
-    </div>
+    </Navbar>
   </div>
 )
 

@@ -23,7 +23,12 @@ h1 {
 }
 
 .link {
-  color: black;
+  color: #00FFFF;
   text-decoration: none;
   padding: 5px;
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
 }

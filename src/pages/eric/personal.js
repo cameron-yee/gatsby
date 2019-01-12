@@ -1,8 +1,8 @@
 import React from 'react'
-import PostLink from '../components/postlink'
+import PostLink from '../../components/postlink'
 
-import Layout from '../components/layout/layout'
-import Content from '../components/layout/pieces/content'
+import Layout from '../../components/layout/layout'
+import Content from '../../components/layout/pieces/content'
 import { graphql } from 'gatsby';
 
 const Blog = ({data: { allMarkdownRemark: { edges },},}) => {

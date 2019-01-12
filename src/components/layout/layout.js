@@ -38,7 +38,7 @@ const Layout = ({ children }) => (
         {/* <Header links="['/about']"/> */}
         {/* <div className="section">
           <div className="container"> */}
-        <div className="columns">
+        <div className="columns" style={{margin: '0'}}>
             <LeftMenu>
               <Link to="/cameron">Cameron</Link>
               <Link to="/eric">Eric</Link>

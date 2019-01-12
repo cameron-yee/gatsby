@@ -1,11 +1,11 @@
 import React from 'react'
-import PostLink from '../components/postlink'
+import PostLink from '../../components/postlink'
 
-import Layout from '../components/layout/layout'
-import Content from '../components/layout/pieces/content'
+import Layout from '../../components/layout/layout'
+import Content from '../../components/layout/pieces/content'
 import { graphql } from 'gatsby';
 
-const Blog = ({data: { allMarkdownRemark: { edges },},}) => {
+const EricDSHIP = ({data: { allMarkdownRemark: { edges },},}) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
@@ -19,13 +19,13 @@ const Blog = ({data: { allMarkdownRemark: { edges },},}) => {
   )
 }
 
-export default Blog
+export default EricDSHIP
 
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: {frontmatter: { person: {eq: "Eric"}, type: {eq: "Personal"}}}
+      filter: {frontmatter: { person: {eq: "Eric"}, type: {eq: "DSHIP"}}}
     ) {
       edges {
         node {
