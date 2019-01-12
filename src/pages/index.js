@@ -9,8 +9,10 @@ const IndexPage = () => (
   <Layout>
     <Content>
       <div>
-        <h1>Hello World</h1>
-        <div>About site section</div>
+        <h1>Welcome to Monday Night DSHIP</h1>
+        <div>
+          <p>Every week we meet and do...</p>
+        </div>
       </div>
     </Content>
   </Layout>

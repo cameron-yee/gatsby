@@ -18,7 +18,7 @@ exports.createPages = ({ actions, graphql }) => {
       {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: {frontmatter: { person: {eq: "Cameron"}}}
+          filter: {frontmatter: { person: {eq: "cameron"}}}
           limit: 1000 
         ) {
           edges {
@@ -38,7 +38,7 @@ exports.createPages = ({ actions, graphql }) => {
         result.data.allMarkdownRemark.edges.forEach(({node}) => {
           const slug = node.frontmatter.slug
           createPage({
-            path: `/cameron${slug}`,
+            path: `/cameron/${slug}`,
             component: journalTemplate,
             context: {
               slug
@@ -57,7 +57,7 @@ exports.createPages = ({ actions, graphql }) => {
       {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: {frontmatter: { person: {eq: "Eric"}}}
+          filter: {frontmatter: { person: {eq: "eric"}}}
           limit: 1000 
         ) {
           edges {
@@ -77,7 +77,7 @@ exports.createPages = ({ actions, graphql }) => {
         result.data.allMarkdownRemark.edges.forEach(({node}) => {
           const slug = node.frontmatter.slug
           createPage({
-            path: `/eric${slug}`,
+            path: `/eric/${slug}`,
             component: journalTemplate,
             context: {
               slug

@@ -45,7 +45,7 @@ const Footer = () => (
           </ul>
         </div>
       </div>
-      <p style={{ marginBottom: '.5rem'}}>Copyright Cameron Yee 2020</p>
+      <p style={{ marginBottom: '.5rem'}}>© Cameron Yee 2020</p>
     </div>
   </FooterDiv>
 )

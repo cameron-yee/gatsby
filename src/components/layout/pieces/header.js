@@ -30,10 +30,10 @@ const Header = (props) => (
       </div>
       <div className="navbar-end">
         <div className="navbar-item">
-          <Link className={headerStyles.link} to="/about">About</Link>
-          <Link className={headerStyles.link} to="/cameron">Cameron</Link>
-          <Link className={headerStyles.link} to="/eric">Eric</Link>
-          <Link className={headerStyles.link} to="/admin">Admin</Link>
+          {/* <Link className={headerStyles.link} to="/about">About</Link> */}
+          <Link className={headerStyles.link} to="/calendar">Calendar</Link>
+          {/* <Link className={headerStyles.link} to="/eric">Eric</Link> */}
+          <Link className={headerStyles.link} to="/admin">+New</Link>
         </div>
       </div>
     </Navbar>

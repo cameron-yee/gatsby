@@ -1,5 +1,5 @@
 import React from 'react'
-import PostLink from '../../components/postlink'
+import PostCard from '../../components/postcard'
 
 import Layout from '../../components/layout/layout'
 import Content from '../../components/layout/pieces/content'
@@ -8,7 +8,7 @@ import { graphql } from 'gatsby';
 const EricDSHIP = ({data: { allMarkdownRemark: { edges },},}) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date)
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+    .map(edge => <PostCard key={edge.node.id} post={edge.node} />)
   
   return (
     <Layout>
@@ -25,7 +25,7 @@ export const pageQuery = graphql`
   query {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: {frontmatter: { person: {eq: "Cameron"}, type: {eq: "DSHIP"}}}
+      filter: {frontmatter: { person: {eq: "cameron"}, type: {eq: "DSHIP"}}}
     ) {
       edges {
         node {
@@ -34,6 +34,8 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             slug
+            image
+            alt
             person
             title
             type

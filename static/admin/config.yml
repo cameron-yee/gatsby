@@ -15,8 +15,10 @@ collections:
           - { name: slug, label: Slug }
           - { name: date, label: Date, widget: date }
           - { name: title, label: Title, widget: String }
+          - { name: image, label: Image, widget: image }
+          - { name: alt, label: Alt, widget: String }
           - { name: type,  label: Type, widget: select, options: ['Personal', 'DSHIP'] }
-          - { name: person, label: Person, widget: hidden, default: Cameron }
+          - { name: person, label: Person, widget: hidden, default: cameron }
           - { name: body, label: Body, widget: markdown }
 
     - name: eric-content
@@ -27,8 +29,10 @@ collections:
           - { name: slug, label: Slug }
           - { name: date, label: Date, widget: date }
           - { name: title, label: Title, widget: String }
+          - { name: image, label: Image, widget: image }
+          - { name: alt, label: Alt, widget: String }
           - { name: type,  label: Type, widget: select, options: ['Personal', 'DSHIP'] }
-          - { name: person, label: Person, widget: hidden, default: Eric }
+          - { name: person, label: Person, widget: hidden, default: eric }
           - { name: body, label: Body, widget: markdown }
     
     # - name: sleep

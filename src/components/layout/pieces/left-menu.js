@@ -35,13 +35,13 @@ const Image = styled.img`
 const LeftMenu = ({ children }) => (
   <Container className="column is-one-fifth is-gapless">
     <div>
-      <Image src="/assets/pic.jpg" />
+      <Image src="/assets/mountain.jpg" />
       <Person>Eric</Person>
       <Path href="/eric/personal">Personal</Path>
       <Path href="/eric/dship">DSHIP</Path>
       <Person>Cameron</Person>
       <Path href="/cameron/personal">Personal</Path>
-      <Path href="/cameron/personal">DSHIP</Path>
+      <Path href="/cameron/dship">DSHIP</Path>
     </div>
     {/* {children} */}
   </Container>
