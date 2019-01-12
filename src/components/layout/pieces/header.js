@@ -5,7 +5,7 @@ import 'bulma/bulma.sass'
 import styled from 'styled-components'
 
 const Navbar = styled.div`
-  background-color: black;
+  background-color: #212121 !important;
   color: #00FFFF !important;
   display: flex;
   justify-content: center;

@@ -5,7 +5,7 @@ import footer from './footer.module.scss'
 import styled from 'styled-components'
 
 const FooterDiv = styled.footer`
-  background-color: black;
+  background-color: black !important;
   color: #00FFFF !important;
 
 `

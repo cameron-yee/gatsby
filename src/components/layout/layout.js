@@ -39,10 +39,10 @@ const Layout = ({ children }) => (
         {/* <div className="section">
           <div className="container"> */}
         <div className="columns" style={{margin: '0'}}>
-            <LeftMenu>
-              <Link to="/cameron">Cameron</Link>
+            <LeftMenu />
+              {/* <Link to="/cameron">Cameron</Link>
               <Link to="/eric">Eric</Link>
-            </LeftMenu>
+            </LeftMenu> */}
             <Content>
               {children}
             </Content>
