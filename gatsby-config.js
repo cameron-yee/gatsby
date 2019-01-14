@@ -17,12 +17,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-netlify-cms`,
-      //  options: {
-      //    modulePath: `${__dirname}/src/admin/cms.js`
-      //  }
-    },
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,

@@ -6,6 +6,9 @@ backend:
 media_folder: static/assets
 public_folder: assets
 
+publish_mode: editorial_workflow
+display_url: https://mndship.netlify.com
+
 collections:
     - name: cameron-content
       label: Cameron Content
