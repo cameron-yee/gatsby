@@ -14,7 +14,7 @@ const Navbar = styled.div`
 
 const Header = (props) => (
   <div className="column is-full is-gapless">
-    <Navbar className="navbar is-fixed-top">
+    <Navbar className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <div className="navbar-item">
           <h1>
@@ -22,18 +22,21 @@ const Header = (props) => (
           </h1>
         </div>
         {/* eslint-disable-next-line */}
-        <a role="button" className="navbar-burger">
+        {/* <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="topMenu">
           <span></span>
           <span></span>
           <span></span>
-        </a>
+        </a> */}
       </div>
-      <div className="navbar-end">
-        <div className="navbar-item">
-          {/* <Link className={headerStyles.link} to="/about">About</Link> */}
-          <Link className={headerStyles.link} to="/calendar">Calendar</Link>
-          {/* <Link className={headerStyles.link} to="/eric">Eric</Link> */}
-          <Link className={headerStyles.link} to="/admin">+New</Link>
+      {/* <div id="topMenu" className="navbar-menu"> */}
+      <div id="topMenu">
+        <div className="navbar-end">
+          <div className="navbar-item">
+            {/* <Link className={headerStyles.link} to="/about">About</Link> */}
+            <Link className={headerStyles.link} to="/calendar">Calendar</Link>
+            {/* <Link className={headerStyles.link} to="/eric">Eric</Link> */}
+            <Link className={headerStyles.link} to="/admin">+New</Link>
+          </div>
         </div>
       </div>
     </Navbar>
