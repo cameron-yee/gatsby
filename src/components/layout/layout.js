@@ -28,7 +28,7 @@ const Layout = ({ children }) => (
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
           ]}
-          bodyAttributes={{style: 'min-height: 100vh'}}
+          // bodyAttributes={{style: 'min-height: 100vh'}}
         >
           <html lang="en" />
         </Helmet>
