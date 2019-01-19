@@ -12,9 +12,7 @@ const EricDSHIP = ({data: { allMarkdownRemark: { edges },},}) => {
   
   return (
     <Layout>
-      <Content>
-        <div>{Posts}</div>
-      </Content>
+      <div className="columns is-multiline">{Posts}</div>
     </Layout>
   )
 }
@@ -30,7 +28,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 40)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             slug

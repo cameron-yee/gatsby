@@ -6,11 +6,9 @@ import Content from '../components/layout/pieces/content'
 
 const SecondPage = () => (
   <Layout>
-    <Content>
-      <h1>About Cameron</h1>
-      <p>Cameron is ...</p>
-      <Link to="/">Homepage</Link>
-    </Content>
+    <h1>About Cameron</h1>
+    <p>Cameron is ...</p>
+    <Link to="/">Homepage</Link>
   </Layout>
 )
 

@@ -28,11 +28,11 @@ const Layout = ({ children }) => (
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
           ]}
-          bodyAttributes={{class: 'has-navbar-fixed-top'}}
+          bodyAttributes={{style: 'min-height: 100vh'}}
         >
           <html lang="en" />
         </Helmet>
-        <div className="columns">
+        <div className="columns" style={{margin: '0'}}>
           <Header siteTitle={data.site.siteMetadata.title} />
         </div>
         {/* <Header links="['/about']"/> */}

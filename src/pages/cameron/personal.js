@@ -5,7 +5,7 @@ import Layout from '../../components/layout/layout'
 import { graphql } from 'gatsby';
 import 'bulma/bulma.sass'
 
-const Blog = ({data: { allMarkdownRemark: { edges },},}) => {
+const CameronPersonal = ({data: { allMarkdownRemark: { edges },},}) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => <PostCard key={edge.node.id} post={edge.node} />)
@@ -17,7 +17,7 @@ const Blog = ({data: { allMarkdownRemark: { edges },},}) => {
   )
 }
 
-export default Blog
+export default CameronPersonal
 
 export const pageQuery = graphql`
   query {
@@ -28,7 +28,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 40)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             slug

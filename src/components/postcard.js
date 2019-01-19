@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 // import headerStyles from './header.module.scss'
-import 'bulma/bulma.sass'
+// import 'bulma/bulma.sass'
 import styled from 'styled-components'
+
+import '../global-scss/index.scss'
+import PrimaryButtonLink from './ui/primary-button';
 
 const CardContent = styled.div`
   background-color: #212121 !important;
@@ -16,6 +19,15 @@ const Person = styled.h2`
 
 const ImageContainer = styled.figure`
   margin: 0;
+  overflow: hidden;
+
+  > img {
+    transition: transform .2s linear;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 `
 
 const PostCard = ({ post }) => (
@@ -32,7 +44,7 @@ const PostCard = ({ post }) => (
         </ImageContainer>
       </div>
       <CardContent className="card-content">
-        <div className="media">
+        {/* <div className="media">
           <div className="media-left">
             <figure className="image is-48x48" style={{overflow: "hidden"}}>
               { post.frontmatter.person === 'cameron' &&
@@ -40,14 +52,14 @@ const PostCard = ({ post }) => (
               }
               { post.frontmatter.person === 'eric' &&
                 <img src="/assets/eric.jpg" alt="Placeholder image" />
-              }
-            </figure>
+              } */}
+            {/* </figure>
           </div>
           <div className="media-content">
-            <Person className="title is-4">{post.frontmatter.person}</Person>
+            <Person className="title is-4">{post.frontmatter.person}</Person> */}
             {/* <p className="subtitle is-6">@johnsmith</p> */}
-          </div>
-        </div>
+          {/* </div>
+        </div> */}
 
         <div>
           <h2>{post.frontmatter.title}</h2>
@@ -55,7 +67,7 @@ const PostCard = ({ post }) => (
           <p>{post.excerpt}</p>
           <br />
           <br />
-          <a className="button is-primary" href={`/${post.frontmatter.person}/${post.frontmatter.slug}`}>Read</a>
+          <PrimaryButtonLink href={`/${post.frontmatter.person}/${post.frontmatter.slug}`}>Read</PrimaryButtonLink>
         </div>
       </CardContent>
     </div>

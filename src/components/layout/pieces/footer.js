@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import 'bulma/bulma.sass'
+// import 'bulma/bulma.sass'
 import footer from './footer.module.scss'
 import styled from 'styled-components'
+
+import '../../../global-scss/index.scss'
 
 const FooterDiv = styled.footer`
   background-color: black !important;
@@ -31,12 +33,12 @@ const Footer = () => (
       <div className="columns" style={{margin: '.25rem'}}>
         <div className="column is-on-third">
           <ul className={footer.footer_ul}>
-            <ListItem><Link to="/cameron">Cameron</Link></ListItem>
+            <ListItem><Link to="/calendar">Calendar</Link></ListItem>
           </ul>
         </div>
         <div className="column is-on-third">
           <ul className={footer.footer_ul}>
-            <ListItem><Link to="/eric">Eric</Link></ListItem>
+            <ListItem><a href="/admin">+New</a></ListItem>
           </ul>
         </div>
         <div className="column is-on-third">
