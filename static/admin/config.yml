@@ -37,6 +37,42 @@ collections:
           - { name: type,  label: Type, widget: select, options: ['Personal', 'DSHIP'] }
           - { name: person, label: Person, widget: hidden, default: eric }
           - { name: body, label: Body, widget: markdown }
+
+    - name: eric-book
+      label: Eric Book
+      folder: src/data/eric/books
+      create: true
+      fields:
+          - { name: slug, label: Slug, widget: string }
+          - { name: date, label: Date, widget: date }
+          - { name: title, label: Title, widget: string }
+          - { name: image, label: Image, widget: image }
+          - { name: alt, label: Alt, widget: string }
+          - { name: type,  label: Type, widget: hidden, default: book }
+          - { name: author, label: Author(s), widget: string, default: eric }
+          - { name: description, label: Description, widget: text }
+          - { name: genre, label: Genre, widget: select, multiple: true, options: ['Action','Biography','Comic Book','Comedy','Drama','Educational','Easy Reading','Fantasy','Fun','History','Horror','Mystery','Non-fiction','Poetry','Sci-fi','Short Story','Thriller'] }
+          - { name: year, label: Year, widget: string, required: false }
+          - { name: buyingLink, label: Buying Link, widget: string, required: false }
+          - { name: person, label: Person, widget: hidden, default: eric }
+
+    - name: cameron-book
+      label: Cameron Book
+      folder: src/data/cameron/books
+      create: true
+      fields:
+          - { name: slug, label: Slug, widget: string }
+          - { name: date, label: Date, widget: date }
+          - { name: title, label: Title, widget: string }
+          - { name: image, label: Image, widget: image }
+          - { name: alt, label: Alt, widget: string }
+          - { name: type,  label: Type, widget: hidden, default: book }
+          - { name: author, label: Author(s), widget: string, default: cameron }
+          - { name: description, label: Description, widget: text }
+          - { name: genre, label: Genre, widget: select, multiple: true, options: ['Action','Biography','Comic Book','Comedy','Drama','Fantasy','History','Horror','Mystery','Non-fiction','Poetry','Sci-fi','Short Story','Thriller'] }
+          - { name: year, label: Year, widget: string, required: false }
+          - { name: buyingLink, label: Buying Link, widget: string, required: false }
+          - { name: person, label: Person, widget: hidden, default: cameron }
     
     # - name: sleep
     #   label: Sleep

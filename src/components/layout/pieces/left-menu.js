@@ -113,6 +113,7 @@ const LeftMenu = ({ children }) => (
         <ListItem><Person><Path href="/eric">Eric</Path></Person></ListItem>
         <ListItem><Path href="/eric/personal">Personal</Path></ListItem>
         <ListItem><Path href="/eric/dship">DSHIP</Path></ListItem>
+        <ListItem><Path href="/eric/books">Book List</Path></ListItem>
       </List>
     </PersonContainer>
     <PersonContainer>
@@ -120,6 +121,7 @@ const LeftMenu = ({ children }) => (
         <ListItem><Person><Path href="/cameron">Cameron</Path></Person></ListItem>
         <ListItem><Path href="/cameron/personal">Personal</Path></ListItem>
         <ListItem><Path href="/cameron/dship">DSHIP</Path></ListItem>
+        <ListItem><Path href="/cameron/books">Book List</Path></ListItem>
       </List>
     </PersonContainer>
     {/* {children} */}

@@ -89,5 +89,83 @@ exports.createPages = ({ actions, graphql }) => {
       )
   })
 
-  return Promise.all([cameronJournalPages, ericJournalPages])
+  const ericBookPages = new Promise((resolve, reject) => {
+    const bookTemplate = path.resolve(`src/templates/bookTemplate.js`) 
+
+    resolve(graphql(`
+      {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: {frontmatter: { person: {eq: "eric"}}}
+          limit: 1000 
+        ) {
+          edges {
+            node {
+              frontmatter {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `).then(result => {
+      if(result.errors) {
+        reject(result.errors)
+      }
+
+        result.data.allMarkdownRemark.edges.forEach(({node}) => {
+          const slug = node.frontmatter.slug
+          createPage({
+            path: `/eric/book/${slug}`,
+            component: bookTemplate,
+            context: {
+              slug
+            },
+          })
+        })
+
+        })
+      )
+  })
+
+  const cameronBookPages = new Promise((resolve, reject) => {
+    const bookTemplate = path.resolve(`src/templates/bookTemplate.js`) 
+
+    resolve(graphql(`
+      {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: {frontmatter: { person: {eq: "cameron"}}}
+          limit: 1000 
+        ) {
+          edges {
+            node {
+              frontmatter {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `).then(result => {
+      if(result.errors) {
+        reject(result.errors)
+      }
+
+        result.data.allMarkdownRemark.edges.forEach(({node}) => {
+          const slug = node.frontmatter.slug
+          createPage({
+            path: `/cameron/book/${slug}`,
+            component: bookTemplate,
+            context: {
+              slug
+            },
+          })
+        })
+
+        })
+      )
+  })
+
+  return Promise.all([cameronJournalPages, cameronBookPages, ericJournalPages, ericBookPages])
 }
